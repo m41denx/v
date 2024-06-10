@@ -68,6 +68,10 @@ func (d *Docker) StopContainer(id string) error {
 	return d.cli.ContainerStop(context.Background(), id, container.StopOptions{})
 }
 
+func (d *Docker) SendSignal(id string, sig string) error {
+	return d.cli.ContainerKill(context.Background(), id, sig)
+}
+
 func (d *Docker) StartContainer(cmd []string, image string, binds []string, wispuuid string) (id string, err error) {
 	box, err := d.cli.ContainerCreate(
 		context.Background(),
