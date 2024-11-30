@@ -3,7 +3,7 @@ module github.com/m41denx/v
 go 1.22.3
 
 require (
-	github.com/docker/docker v26.1.4+incompatible
+	github.com/docker/docker v26.1.5+incompatible
 	github.com/nothinux/octo-proxy v1.1.0
 )
 
